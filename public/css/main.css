@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    background: linear-gradient(329.54deg, #EBF2F5 0%, #E0F1F1 100%) no-repeat;
+}
+
+:root{
+    font-size: 62.5%;
+} 
+
+
+body,input, button, textarea{
+    font: 400 1.8rem/1 'Nunito', sans-serif;
+}
