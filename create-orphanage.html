@@ -24,8 +24,9 @@
 		<link rel="stylesheet" href="./public/css/animations.css" />
 		<link rel="stylesheet" href="./public/css/sidebar.css" />
 		<link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
-		<link rel="stylesheet" href="./public/css/map.css">
-		<link rel="stylesheet" href="./public/css/form.css">
+		<link rel="stylesheet" href="./public/css/map.css" />
+		<link rel="stylesheet" href="./public/css/buttons.css" />
+		<link rel="stylesheet" href="./public/css/form.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,19 +39,17 @@
 	<body id="body">
 		<div id="page-create-orphanage">
 			<aside class="animate-right sidebar">
-				<img src="./public/images/map-marker.svg" alt="Logo Happy">
+				<img src="./public/images/map-marker.svg" alt="Logo Happy" />
 
 				<footer>
 					<button onclick="history.back()">
-						<img src="./public/images/arrow-back.svg" alt="Botão Voltar">
+						<img src="./public/images/arrow-back.svg" alt="Botão Voltar" />
 					</button>
 				</footer>
 			</aside>
 
 			<main class="animate-appear with-sidebar">
-				
 				<form action="">
-
 					<fieldset>
 						<legend>Dados</legend>
 
@@ -66,63 +65,84 @@
 
 						<div class="input-block">
 							<label for="name">Nome</label>
-							<input id="name" name="name">
+							<input id="name" name="name" required />
 						</div>
 
 						<div class="input-block">
-							<label for="about">Sobre  <span>Máximo de 300 caracteres</span></label>
-							<textarea id="about" name="about"></textarea>
+							<label for="about"
+								>Sobre <span>Máximo de 300 caracteres</span></label
+							>
+							<textarea id="about" name="about" required></textarea>
 						</div>
 
 						<div class="input-block">
 							<label for="whatsapp">Número de Whatsapp</label>
-							<input id="whatsapp" name="whatsapp">
+							<input id="whatsapp" name="whatsapp" required />
 						</div>
 
 						<div class="input-block images">
 							<label for="images">Foto</label>
-							
+
 							<div class="images-upload" id="images">
-								<input name="images" placeholder="Cole o link da imagem aqui">
+								<div class="new-upload">
+									<input
+										name="images"
+										placeholder="Cole o link da imagem aqui"
+										required
+									/>
+									<span>
+										<img
+											src="./public/images/remove-file.svg"
+											alt="Remover foto"
+										/>
+									</span>
+								</div>
 							</div>
-							<button type="button" >
-								<img src="./public/images/add-file.svg" alt="Nova imagem">
+
+							<button type="button">
+								<img src="./public/images/add-file.svg" alt="Nova foto" />
 							</button>
 						</div>
-
 					</fieldset>
 
 					<fieldset>
 						<legend>Visitação</legend>
-					
+
 						<div class="input-block">
 							<label for="instructions">Instruções</label>
-							<textarea id="instructions" name="instructions"></textarea>
+							<textarea
+								id="instructions"
+								name="instructions"
+								required
+							></textarea>
 						</div>
-					
+
 						<div class="input-block">
 							<label for="opening_hours">Horário das visitas</label>
-							<input id="opening_hours" name="opening_hours">
+							<input id="opening_hours" name="opening_hours" required />
 						</div>
-					
+
 						<div class="input-block">
-							<label for="opening_on_weekends">Atende aos fins de semana?</label>
-							<input type="hidden" id="open_on_weekends" name="open_on_weekends" value="1">
-							
+							<label for="opening_on_weekends"
+								>Atende aos fins de semana?</label
+							>
+							<input
+								type="hidden"
+								id="open_on_weekends"
+								name="open_on_weekends"
+								value="1"
+								required
+							/>
+
 							<div class="button-select">
 								<button type="button" class="active">Sim</button>
 								<button type="button" class="">Não</button>
 							</div>
 
-							<button type="submit" class="primary-button">
-								Confirmar
-							</button>
-
+							<button type="submit" class="primary-button">Confirmar</button>
 						</div>
 					</fieldset>
-
 				</form>
-
 			</main>
 		</div>
 
