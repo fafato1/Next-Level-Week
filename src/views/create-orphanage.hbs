@@ -18,15 +18,15 @@
 			crossorigin=""
 		></script>
 
-		<link rel="icon" href="./public/images/logo-icon.png" />
+		<link rel="icon" href="/images/logo-icon.png" />
 
-		<link rel="stylesheet" href="./public/css/main.css" />
-		<link rel="stylesheet" href="./public/css/animations.css" />
-		<link rel="stylesheet" href="./public/css/sidebar.css" />
-		<link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
-		<link rel="stylesheet" href="./public/css/map.css" />
-		<link rel="stylesheet" href="./public/css/buttons.css" />
-		<link rel="stylesheet" href="./public/css/form.css" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/animations.css" />
+		<link rel="stylesheet" href="/css/sidebar.css" />
+		<link rel="stylesheet" href="/css/page-create-orphanage.css" />
+		<link rel="stylesheet" href="/css/map.css" />
+		<link rel="stylesheet" href="/css/buttons.css" />
+		<link rel="stylesheet" href="/css/form.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,17 +39,20 @@
 	<body id="body">
 		<div id="page-create-orphanage">
 			<aside class="animate-right sidebar">
-				<img src="./public/images/map-marker.svg" alt="Logo Happy" />
+				<img src="/images/map-marker.svg" alt="Logo Happy" />
 
 				<footer>
 					<button onclick="history.back()">
-						<img src="./public/images/arrow-back.svg" alt="Botão Voltar" />
+						<img src="/images/arrow-back.svg" alt="Botão Voltar" />
 					</button>
 				</footer>
 			</aside>
 
 			<main class="animate-appear with-sidebar">
-				<form action="">
+				<form 
+				action="save-orphanage" 
+				method="post" 
+				onsubmit="validate(event)">
 					<fieldset>
 						<legend>Dados</legend>
 
@@ -90,10 +93,11 @@
 										name="images"
 										placeholder="Cole o link da imagem aqui"
 										required
+										type="url"
 									/>
-									<span>
+									<span onclick="deleteField(event)">
 										<img
-											src="./public/images/remove-file.svg"
+											src="/images/remove-file.svg"
 											alt="Remover foto"
 										/>
 									</span>
@@ -106,7 +110,7 @@
 							type="button"
 							
 							/>
-								<img src="./public/images/add-file.svg" alt="Nova foto" />
+								<img src="/images/add-file.svg" alt="Nova foto" />
 							</button>
 						</div>
 					</fieldset>
@@ -141,8 +145,18 @@
 							/>
 
 							<div class="button-select">
-								<button type="button" class="active">Sim</button>
-								<button type="button" class="">Não</button>
+								<button 
+								data-value="1"
+								onclick="toggleSelect(event)" 
+								type="button" 
+								class="active"
+								>Sim</button>
+								<button 
+								data-value="0"
+								onclick="toggleSelect(event)" 
+								type="button" 
+								class=""
+								>Não</button>
 							</div>
 
 							<button type="submit" class="primary-button">Confirmar</button>
@@ -152,6 +166,6 @@
 			</main>
 		</div>
 
-		<script src="./public/scripts/page-create-orphanage.js"></script>
+		<script src="/scripts/page-create-orphanage.js"></script>
 	</body>
 </html>
