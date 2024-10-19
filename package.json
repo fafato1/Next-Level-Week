@@ -19,7 +19,7 @@
   "homepage": "https://github.com/fafato1/NLW#readme",
   "dependencies": {
     "bun-types": "^0.1.2",
-    "express": "^4.21.0",
+    "express": "^4.21.1",
     "hbs": "^4.2.0",
     "nodemon": "^2.0.21",
     "sqlite-async": "^1.1.3"
